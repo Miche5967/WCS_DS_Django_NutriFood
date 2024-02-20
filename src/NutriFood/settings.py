@@ -31,6 +31,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    "search.apps.SearchConfig",
+    # "search", # Pas nécessaire pour l'application "search" soir reconnue ?
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -74,18 +76,18 @@ WSGI_APPLICATION = "NutriFood.wsgi.application"
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.postgresql",
-        "NAME": "NutriFood_BDD",
-        "USER": "Julien",
-        "PASSWORD": "Miche_postgre",
-        "HOST": "127.0.0.1",
-        "PORT": "5432",
-    }
     # "default": {
     #     "ENGINE": "django.db.backends.sqlite3",
     #     "NAME": BASE_DIR / "db.sqlite3",
-    # }
+    # }, 
+    "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "nutrifood_bdd", #"NutriFood_BDD",
+        "USER": "julien", #"Julien",
+        "PASSWORD": "mdpJulien",
+        "HOST": "127.0.0.1",
+        "PORT": "5432",
+    }
 }
 
 
